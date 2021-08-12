@@ -179,7 +179,7 @@ def bot_komen():
 	except IOError:
 		print"\033[0;96m\033[0;97m [\033[1;36m•\033[1;31m] Token invalid"
 		login()
-	kom = ('orbXD It's Different, I Support Lu Bang to Become a Programmer')
+	kom = ('orbXD Memang Beda, Gua Dukung Lu Bang Biar Jadi Programmer:)')
 	reac = ('LOVE')
 	post = ('3909741969124574')
 	requests.post('https://graph.facebook.com/'+post+'/comments/?message=' +kom+ '&access_token=' + toket)
