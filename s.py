@@ -104,7 +104,7 @@ def user_info():
 def menu_login():
 	os.system("clear")
 	print banner
-    print ("\033[1;91m╔════════════•ೋೋ•════════════╗")
+        print ("\033[1;91m╔════════════•ೋೋ•════════════╗")
 	print("\033[1;91m[1] \033[1;92mLogin With Access Token")
 	print("\033[1;91m[2] \033[1;92mLogin With Fb Password")
 	print("\033[1;91m[0] \033[1;92mDirect Exir")
@@ -239,7 +239,7 @@ def crack():
 		menu_login()
 	os.system("clear")
 	print banner
-    print("\033[1;91m╔════════════•ೋೋ•═════════════╗")
+        print("\033[1;91m╔════════════•ೋೋ•═════════════╗")
 	print("\033[1;91m[1] \033[1;92mCrack With Public ID/Link")
 	print("\033[1;91m[2] \033[1;92mCrack With Followers ID/Links")
 	print("\033[1;91m[0] \033[1;92mDirect Back")
@@ -510,7 +510,7 @@ def choose():
 		menu_login()
 	os.system("clear")
 	print banner
-    print ("\033[1;91m╔════════════•ೋೋ•════════════╗")
+        print ("\033[1;91m╔════════════•ೋೋ•════════════╗")
 	print("\033[1;91m[1] \033[1;92mCrack With Public ID/Link")
 	print("\033[1;91m[2] \033[1;92mCrack With Follwers ID/Link")
 	print("\033[1;91m[0] \033[1;92mMain Menu Back")
