@@ -116,7 +116,7 @@ def menu_login2():
 	if user_select =="1":
 		os.system("clear")
 		print banner
-		print("Login With Token").center(50)
+		print("\033[1;92mLogin With Token").center(50)
 		print("")
                 token = raw_input("\033[1;92m[!] Put Token : \033[36;1m")
                 token_ab = open("access_token.txt", "w")
@@ -260,7 +260,7 @@ def crack_select():
 			q = json.loads(r.text)
 			os.system('clear')
 			print banner
-			print("\033[1;91m[!] Target User : "+q\033[1;92m["name"])
+			print("\033[1;91m[!] Target User : "+q["\033[1;92mname"])
 		except KeyError:
 			print("")
 			print("\033[1;91mInvalid Link Or Friendlist Has Privact").center(50)
@@ -283,7 +283,7 @@ def crack_select():
 			q = json.loads(r.text)
 			os.system("clear")
 			print banner
-			print("\033[1;91m[!] Target User : "+q\033[1;92m["name"])
+			print("\033[1;91m[!] Target User : "+qm["\033[1;92mname"])
 		except KeyError:
 			print("\t\033[1;91mInvalid id link")
 			print("")
@@ -537,7 +537,7 @@ def choice_select():
 			q = json.loads(r.text)
 			os.system('clear')
 			print banner
-			print("[!] \033[1;91mTarget User : "+q\033[1;92m["name"])
+			print("[!] \033[1;91mTarget User : "+q["\033[1;92mname"])
 		except KeyError:
 			print("")
 			print("\033[1;91mPublic ID Not Found").center(50)
@@ -566,7 +566,7 @@ def choice_select():
 			q = json.loads(r.text)
 			os.system('clear')
 			print banner
-			print("[!] \033[1;91mTarget User : "+q\033[1;92m["name"])
+			print("[!] \033[1;91mTarget User : "+q["\033[1;92mname"])
 		except KeyError:
 			print("")
 			print("\033[1;91mPublic ID Not Found").center(50)
@@ -690,7 +690,7 @@ def choice_select():
 	print(50*"-")
 	print("[!] \033[1;92mThe process has completed")
 	print("[!] \033[1;92mTotal OK/CP :"+str(len(oks)))+"/"+str(len(cps))
-	raw_input("[!] \033[1;93mPress enter to back")
+	raw_input("[!] \033[1;94mPress enter to back")
 	choose()
 		    
 def view_token():
@@ -699,7 +699,7 @@ def view_token():
     print("")
     os.system("cat .fb_token.txt")
     print("")
-    raw_input(" \033[1;93mPress enter to main menu ")
+    raw_input(" \033[1;94mPress enter to main menu ")
     menu()
 			
 if __name__ == '__main__':
