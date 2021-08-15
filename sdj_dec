@@ -266,6 +266,7 @@ def menu():
         time.sleep(1)
         login_choice()
     os.system('clear')
+
 		    pass1 = name+"123"
 		    data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass1, headers=header).text
 		    q = json.loads(data)
